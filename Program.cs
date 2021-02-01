@@ -1,4 +1,5 @@
-﻿using DataStructures.BinarySearchTree;
+﻿using DataStructures.AVL;
+using DataStructures.BinarySearchTree;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,17 @@ namespace DataStructures
 	{
 		static void Main(string[] args)
 		{
-			ExecuteBinaryTreeExample();
+			//ExecuteBinaryTreeExample();
+			ExecuteAVLExample();
 			Console.ReadLine();
+		}
+
+		private static void ExecuteAVLExample()
+		{
+			var avl = new AVLTree();
+			avl.Insert(10);
+			avl.Insert(30);
+			avl.Insert(20);
 		}
 
 		private static void ExecuteBinaryTreeExample()
