@@ -15,8 +15,34 @@ namespace DataStructures
 		{
 			//ExecuteBinaryTreeExample();
 			//ExecuteAVLExample();
-			ExecuteHeapExample();
+			//ExecuteHeapExample();
+			ExecuteTrieExample();
 			Console.ReadLine();
+		}
+
+		private static void ExecuteTrieExample()
+		{
+			// Autocompletion
+
+			var trie = new Trie.Trie();
+			trie.Insert("car");
+			trie.Insert("care");
+			trie.Insert("card");
+			trie.Insert("careful");
+			trie.Insert("egg");
+			Console.WriteLine(string.Join(",", trie.FindWords(null)));
+			// Remove
+			/*var trie = new Trie.Trie();
+			trie.Insert("care");
+			trie.Insert("car");
+			trie.Remove("car");
+			trie.Remove("care");
+			Console.WriteLine(trie.Contains("car"));
+			Console.WriteLine(trie.Contains("care"));*/
+
+			/*var trie = new Trie.Trie();
+			trie.Insert("care");
+			trie.Traverse();*/
 		}
 
 		private static void ExecuteHeapExample()
