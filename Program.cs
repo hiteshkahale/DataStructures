@@ -1,4 +1,5 @@
 ﻿using DataStructures.AVL;
+using DataStructures.Heap;
 using DataStructures.BinarySearchTree;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,42 @@ namespace DataStructures
 		static void Main(string[] args)
 		{
 			//ExecuteBinaryTreeExample();
-			ExecuteAVLExample();
+			//ExecuteAVLExample();
+			ExecuteHeapExample();
 			Console.ReadLine();
+		}
+
+		private static void ExecuteHeapExample()
+		{
+			// Heapify
+			var array = new int[] { 5, 3, 15, 20, 1, 4 };
+			//MaxHeap.Heapify(array);
+			//Console.WriteLine(string.Join(",", array));
+
+			// Kth Largest
+			Console.WriteLine(MaxHeap.GetKthLargest(array,5));
+
+			// Heap Sort
+			/*var array = new int[]{ 5, 3, 15, 20, 1, 4 };
+			var heap = new Heap.Heap(array.Length);
+			foreach (var item in array)
+				heap.Insert(item);
+
+			// Ascending Order
+			for (int i = array.Length - 1 ; i >= 0; i--)
+				array[i] = heap.Remove();
+
+			Console.WriteLine(string.Join(",", array)); */
+
+			/*
+			var heap = new Heap.Heap(10);
+			heap.Insert(10);
+			heap.Insert(5);
+			heap.Insert(17);
+			heap.Insert(22);
+
+			// In heap can remove only item at root
+			heap.Remove(); */
 		}
 
 		private static void ExecuteAVLExample()

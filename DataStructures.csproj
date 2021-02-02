@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="AVL\AVLTree.cs" />
     <Compile Include="BinaryTree\Tree.cs" />
+    <Compile Include="Heap\Heap.cs" />
+    <Compile Include="Heap\MaxHeap.cs" />
+    <Compile Include="Heap\PriorityQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
