@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataStructures.Graphs;
 
 namespace DataStructures
 {
@@ -16,8 +17,54 @@ namespace DataStructures
 			//ExecuteBinaryTreeExample();
 			//ExecuteAVLExample();
 			//ExecuteHeapExample();
-			ExecuteTrieExample();
+			//ExecuteTrieExample();
+			ExecuteGraphExample();
 			Console.ReadLine();
+		}
+
+		private static void ExecuteGraphExample()
+		{
+			// HasCycle
+			var graph = new Graph();
+			graph.AddNode("A");
+			graph.AddNode("B");
+			graph.AddNode("C");
+			graph.AddEdge("A", "B");
+			graph.AddEdge("B", "C");
+			graph.AddEdge("C", "A");
+			Console.WriteLine(graph.HasCycle());
+
+			/*
+			// Topological Sort
+			var graph = new Graph();
+			graph.AddNode("X");
+			graph.AddNode("A");
+			graph.AddNode("B");
+			graph.AddNode("P");
+			graph.AddEdge("X", "A");
+			graph.AddEdge("X", "B");
+			graph.AddEdge("A", "P");
+			graph.AddEdge("B", "P");
+			var list = graph.TopologicalSort();
+			Console.WriteLine(string.Join(",", list));
+			*/
+
+			// Add, remove node and edge
+			/*var graph = new Graph();
+			graph.AddNode("A");
+			graph.AddNode("B");
+			graph.AddNode("C");
+			graph.AddEdge("A", "B");
+			graph.AddEdge("A", "C"); */
+			//graph.RemoveEdge("A","B");
+			//graph.Print();
+
+			// Traverse
+			// Depth first 
+			// graph.TraverseDepthFirst("A"); // Recursive
+			// graph.TraverseDepthFirstIterative("A"); // Iterative
+			// Breadth first
+			// graph.TraverseBreadthFirstIterative("A");
 		}
 
 		private static void ExecuteTrieExample()
