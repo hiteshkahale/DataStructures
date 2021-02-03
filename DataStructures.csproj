@@ -45,6 +45,9 @@
     <Compile Include="AVL\AVLTree.cs" />
     <Compile Include="BinaryTree\Tree.cs" />
     <Compile Include="Graphs\Graph.cs" />
+    <Compile Include="Graphs\Path.cs" />
+    <Compile Include="Graphs\PriorityQueue.cs" />
+    <Compile Include="Graphs\WeightedGraph.cs" />
     <Compile Include="Heap\Heap.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
     <Compile Include="Heap\PriorityQueue.cs" />

@@ -18,8 +18,42 @@ namespace DataStructures
 			//ExecuteAVLExample();
 			//ExecuteHeapExample();
 			//ExecuteTrieExample();
-			ExecuteGraphExample();
+			//ExecuteGraphExample();
+			ExecuteUndirectedGraphExample();
 			Console.ReadLine();
+		}
+
+		private static void ExecuteUndirectedGraphExample()
+		{
+			/*
+			var graph = new WeightedGraph();
+			graph.AddNode("A");
+			graph.AddNode("B");
+			graph.AddNode("C");
+			graph.AddEdge("A", "B", 1);
+			graph.AddEdge("B", "C", 2);
+			//graph.AddEdge("A", "C", 10);
+			// graph.Print();
+			// Shortest Path
+			// var path = graph.GetShortestPath("A", "C");
+			// Console.WriteLine(path);
+			// Cycle detection
+			Console.WriteLine(graph.HasCycle());
+			*/
+
+			// Prims Algorithm
+			var graph = new WeightedGraph();
+			graph.AddNode("A");
+			graph.AddNode("B");
+			graph.AddNode("C");
+			graph.AddNode("D");
+			graph.AddEdge("A", "B", 3);
+			graph.AddEdge("B", "D", 4);
+			graph.AddEdge("C", "D", 5);
+			graph.AddEdge("A", "C", 1);
+			graph.AddEdge("B", "C", 2);
+			var tree = graph.GetMinimumSpanningTree();
+			tree.Print();
 		}
 
 		private static void ExecuteGraphExample()
